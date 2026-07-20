@@ -1,0 +1,10 @@
+image: python:3.12-alpine
+
+stages:
+  - test
+
+validate:
+  stage: test
+  script:
+    - python3 scripts/validate_report.py examples/customer-root-cli-ready-resniff.md
+    - python3 -m unittest discover -s tests -v
