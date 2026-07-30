@@ -1,4 +1,4 @@
 interface:
-  display_name: "网页能力嗅探"
-  short_description: "只读嗅探网页并生成 CLI-ready 脱敏契约与差距报告"
-  default_prompt: "Use $web-capability-sniffer 对这个 URL 进行只读嗅探，生成 CLI-ready 前置契约、风险与差距报告。"
+  display_name: "网页系统探查"
+  short_description: "只读探查网页系统，沉淀功能地图、Flow 与证据"
+  default_prompt: "Use $web-capability-sniffer 探查这个后台系统，生成脱敏的功能地图、业务 Flow、证据索引和人工审核清单。"
