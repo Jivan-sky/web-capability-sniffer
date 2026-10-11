@@ -1,0 +1,4 @@
+interface:
+  display_name: "网页系统探查"
+  short_description: "只读探查网页系统，沉淀功能地图、Flow 与证据"
+  default_prompt: "Use $web-capability-sniffer 探查这个后台系统，生成脱敏的功能地图、业务 Flow、证据索引和人工审核清单。"
