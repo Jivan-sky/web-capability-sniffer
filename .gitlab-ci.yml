@@ -1,10 +1,21 @@
 image: python:3.12-alpine
 
+variables:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: "utf-8"
+
 stages:
   - test
 
 validate:
   stage: test
   script:
+    - python3 scripts/validate_report.py examples/exploration-report-example.md
     - python3 scripts/validate_report.py examples/customer-root-cli-ready-resniff.md
     - python3 -m unittest discover -s tests -v
+
+guard:
+  stage: test
+  image: node:20-alpine
+  script:
+    - node --test tests/readonly_guard.test.js

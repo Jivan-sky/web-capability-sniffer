@@ -1,4 +1,4 @@
 interface:
   display_name: "网页系统探查"
-  short_description: "只读探查网页系统，沉淀功能地图、Flow 与证据"
-  default_prompt: "Use $web-capability-sniffer 探查这个后台系统，生成脱敏的功能地图、业务 Flow、证据索引和人工审核清单。"
+  short_description: "只读探查网页系统，运行时拒绝写请求，沉淀动作审计与可回滚判断"
+  default_prompt: "Use $web-capability-sniffer 严格只读探查这个后台系统：先完成权限边界确认并安装默认拒绝的请求 guard，再生成脱敏的功能地图、业务 Flow、逐动作审计、可追溯/回滚判断和人工审核清单；不执行任何写操作，不直连数据库。"
